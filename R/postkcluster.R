@@ -2,11 +2,9 @@
 ## apply clustering to reduce number of total clusters 
 ##
 
-
 postkcluster <-
 function(mask, cx, clk=4, plot=TRUE)
 {
-    require("cluster")
     ncol <- ncol(mask)
     mask[mask != 0] <- cx
     cx <- as.vector(mask)

@@ -36,9 +36,7 @@ Adelino Ferreira da Silva, A Dirichlet process mixture model for
 Adelino Ferreira da Silva, Bayesian mixture models of variable
  dimension for image segmentation,
  \emph{Comput. Methods Programs Biomed.} 94 (2009) 1-14.
-}
 
-\references{ 
 Anja Struyf, Mia Hubert & Peter J. Rousseeuw (1996): Clustering in an
   Object-Oriented Environment. Journal of Statistical Software, 1.
   http://www.stat.ucla.edu/journals/jss/
@@ -59,7 +57,7 @@ Anja Struyf, Mia Hubert & Peter J. Rousseeuw (1996): Clustering in an
 
 \examples{
 \dontrun{
-## see Example 2 in `dpmixsim'.
+## see Examples in `dpmixsim'.
 }}
 
 \keyword{cluster}
