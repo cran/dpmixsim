@@ -7,9 +7,6 @@
   The mask used here is an all-brain mask; it just removes non-brain regions, as the result of applying a brain extraction tool to the specified dataset.
   Other masks may be defined to select regions of interest (ROIs).
 }
-\usage{
-x <- premask(slicedata, subsamp=TRUE)
-}
 \format{
   The file \file{t1_pn3_rf0_slice_0092_mask.nii.gz} is in gzipped NIFTI format.
   The R-package \pkg{oro.nifti} is required to read gzipped NIFTI files.

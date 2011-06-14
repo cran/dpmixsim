@@ -5,9 +5,9 @@
 readsliceimg <-
 function (fbase="t1_pn3_rf0", swap=FALSE) 
 {
-    mri.filtered <- system.file(paste("data/", fbase, "_slice_0092.nii.gz", 
+    mri.filtered <- system.file(paste("extdata/", fbase, "_slice_0092.nii.gz", 
         sep = ""), package = "dpmixsim")
-    mri.mask <- system.file(paste("data/", fbase, "_slice_0092_mask.nii.gz", 
+    mri.mask <- system.file(paste("extdata/", fbase, "_slice_0092_mask.nii.gz", 
         sep = ""), package = "dpmixsim")
     img.nifti <- readNIfTI(mri.filtered)
     mask.nifti <- readNIfTI(mri.mask)

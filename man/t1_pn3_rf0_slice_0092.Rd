@@ -7,9 +7,6 @@
   BrainWeb simulations are based on an anatomical model of normal brain, which can serve as the ground truth for any analysis procedure.
   BrainWeb datasets and are provided by the McConnell Brain Imaging Center at the Montreal Neurological Institute, \url{http://www.bic.mni.mcgill.ca/}, (see Collins et. al. 1998).
 }
-\usage{
-slicedata <- read.sliceimg(fbase="t1_pn3_rf0", swap = TRUE)
-}
 \format{
   The file \file{t1_pn3_rf0_slice_0092.ni.gz} is in gzipped NIFTI format.
   The R-package \pkg{oro.nifti} is required to read gzipped NIFTI files.

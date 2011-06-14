@@ -1,3 +1,7 @@
+Changes in dpmixsim version 0.0-6
+
+	o Updated data directories for compatibility with R version 2.13.0
+
 Changes in dpmixsim version 0.0-5
 
 	o	Initialisation of the simulation may be performed with any number 
