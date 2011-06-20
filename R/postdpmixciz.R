@@ -17,9 +17,9 @@ function(x, res, kmax=30, rec=300, ngrid=200, plot=TRUE)
         invisible(z)
     }
     krec   <- res$krec
-    wrec   <- matrix(res$w,nc=kmax, byr=TRUE)
-    phirec <- matrix(res$phirec,nc=kmax, byr=TRUE)
-    varrec <- matrix(res$varrec,nc=kmax, byr=TRUE)
+    wrec   <- matrix(res$w,ncol=kmax, byrow=TRUE)
+    phirec <- matrix(res$phirec,ncol=kmax, byrow=TRUE)
+    varrec <- matrix(res$varrec,ncol=kmax, byrow=TRUE)
     ## Histogram for k
     khist <- numeric(kmax)
     for (i in 1:length(krec)) {
@@ -40,7 +40,7 @@ function(x, res, kmax=30, rec=300, ngrid=200, plot=TRUE)
     ## Density estimate using kfreq simulated components at each iteration
     ## cidens     <- numeric(ngrid)
     t  <- seq(0,1,length=ngrid)
-    cidens <- matrix(0, nr=kfreq, nc=ngrid)
+    cidens <- matrix(0, nrow=kfreq, ncol=ngrid)
     ydens <- numeric(ngrid)
     ## muk <- NULL
     ## vark <- NULL
@@ -65,7 +65,7 @@ function(x, res, kmax=30, rec=300, ngrid=200, plot=TRUE)
             w  <- w[loc]
             v  <- var[loc]
             ## muk <- cbind(muk,mu)
-            dens     <- matrix(0, nr=nk, nc=ngrid) 
+            dens     <- matrix(0, nrow=nk, ncol=ngrid) 
             for (j in 1:nk){
               # dens[j,] <- dnorm(t, mu[j], sqrt(var)) # unique var
               dens[j,] <- dnorm(t, mu[j], sqrt(v[j])) 
@@ -101,7 +101,7 @@ function(x, res, kmax=30, rec=300, ngrid=200, plot=TRUE)
     dev     <- dev.cur()
     #--------------------------------------------
     # z values : evaluate from w-,mu-,var-results 
-    zall                 <- matrix(0,nr=kfreq,nc=ngrid) 
+    zall                 <- matrix(0,nrow=kfreq,ncol=ngrid) 
     for(k in 1:kfreq) {
         zi                 <- cidens[k,]/ydens 
         zall[k,]     <- zi

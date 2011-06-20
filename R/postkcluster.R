@@ -35,7 +35,7 @@ function(mask, cx, clk=4, plot=TRUE)
         ## cl <- length(tx) + 1
         op <-  options('warn')
         options('warn'=-1)
-        cm <- matrix(1:cl, nr=round(sqrt(cl)), byr=TRUE)
+        cm <- matrix(1:cl, nrow=round(sqrt(cl)), byrow=TRUE)
         options('warn'=op$warn)
         ##---------------------
         par(ask=TRUE)
@@ -66,7 +66,7 @@ function(mask, cx, clk=4, plot=TRUE)
         ## cl <- length(tx) + 1
         op <-  options('warn')
         options('warn'=-1)
-        cm <- matrix(1:cl, nr=round(sqrt(cl)), byr=TRUE)
+        cm <- matrix(1:cl, nrow=round(sqrt(cl)), byrow=TRUE)
         options('warn'=op$warn)
         ysim <- numeric(length(cx))
         ## for(i in 1:length(tx)) 

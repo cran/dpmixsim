@@ -1,3 +1,7 @@
+Changes in dpmixsim version 0.0-7
+
+	Corrections for partial argument match check-notes
+
 Changes in dpmixsim version 0.0-6
 
 	o Updated data directories for compatibility with R version 2.13.0

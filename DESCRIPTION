@@ -1,6 +1,6 @@
 Package: dpmixsim
-Version: 0.0-6
-Date: 2011-06-14
+Version: 0.0-7
+Date: 2011-06-20
 Title: Dirichlet Process Mixture model simulation for clustering and
         image segmentation
 Author: Adelino Ferreira da Silva <afs@fct.unl.pt>
@@ -17,5 +17,5 @@ Description: The package implements a Dirichlet Process Mixture (DPM)
         of interest.
 License: GPL (>= 2)
 Repository: CRAN
-Packaged: 2011-06-14 08:04:11 UTC; afs
-Date/Publication: 2011-06-15 18:00:25
+Packaged: 2011-06-20 08:35:06 UTC; afs
+Date/Publication: 2011-06-20 09:43:07
