@@ -22,6 +22,8 @@
 #include <assert.h>
 #include <stdio.h>
 
+# include <R_ext/Print.h>
+
 using namespace std;
 
 typedef map<int, set<int> >::const_iterator map_citr ;
@@ -38,7 +40,7 @@ void gibbsdpm(const double* xin, const int* ps, int* njinit, int* pnjlen, const 
     const int* upalpha, const int* maxiter, int *recno, const int *kmax,
     int* krec, double* w, double* phirec, double* varrec);
 
-extern void testprint(map<int, set<int> >& table);
+//extern void testprint(map<int, set<int> >& table);
 
 }
 
@@ -78,13 +80,17 @@ void gibbsdpm(const double* xin, const int* ps, int* njinit, int* pnjlen, const 
     theta.insert(pair<int, double>(i, xin[i])); 
     sigmap.insert(pair<int, double>(i, 0.5)); 
   }
+
+/*
 #ifdef DEBUG
   testprint(stb);
 #endif
+*/
   //
   //============================ iterate... ============================//
   //
-  cout << "Processing " << *maxiter << " iterations:\t '.' = 100 iterations" << endl; 
+	//  cout << "Processing " << *maxiter << " iterations:\t '.' = 100 iterations" << endl; 
+	Rprintf("Processing ,%d, iterations:\t '.' = 100 iterations\n", *maxiter);
   //
   for (register int iter=0; iter < *maxiter; ++iter) {
     //
@@ -193,7 +199,7 @@ void gibbsdpm(const double* xin, const int* ps, int* njinit, int* pnjlen, const 
           // DEATH: decrease cluster size 
           --nj[s[i]];
           if (nj[s[i]] < 0){  
-            cout << "error: negative cluster size \n"; exit(1); }
+            REprintf("ERROR: negative cluster size \n"); return; }
           // update stb and stb.size() iteratively
           if (!nj[s[i]]) {
             stb.erase(s[i]);
@@ -234,7 +240,7 @@ void gibbsdpm(const double* xin, const int* ps, int* njinit, int* pnjlen, const 
         // DEATH: decrease cluster size 
         --nj[siold];
         if (nj[siold] < 0){ 
-          cout << "error: negative cluster size \n"; exit(1); }
+          REprintf("ERROR: negative cluster size \n"); return;}
         // update stb and stb.size() iteratively
         if (!nj[siold]) {
           stb.erase(siold);
@@ -293,13 +299,15 @@ void gibbsdpm(const double* xin, const int* ps, int* njinit, int* pnjlen, const 
         varrec[kn]               = sigmap[(*it).first];
       }
     }
+
     if(iter%100 == 0)
-      cout.flush() << ".";
+			Rprintf(".");
 #endif
     // -----------------------------------------------------------------//
   }
 }
 
+/*
 //======================================================================//
 void testprint(map<int, set<int> >& table)
 {
@@ -315,4 +323,5 @@ void testprint(map<int, set<int> >& table)
   }
 }
 //======================================================================//
+*/
 

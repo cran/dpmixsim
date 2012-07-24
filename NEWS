@@ -1,3 +1,9 @@
+Changes in dpmixsim version 0.0-8
+
+  o Correction for non-ASCII demo file
+	
+	o Correction for console output
+	
 Changes in dpmixsim version 0.0-7
 
 	Corrections for partial argument match check-notes

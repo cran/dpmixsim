@@ -1,5 +1,5 @@
 ## Testing dpmixsim discriminating power for
-## Marron Wand Densities as defined in Mächler's nor1mix
+## Marron Wand Densities as defined in Maechler's nor1mix
 
 require(nor1mix)
 op <- par(no.readonly = TRUE, ask=FALSE)
