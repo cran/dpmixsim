@@ -92,7 +92,7 @@ void gibbsdpm(const double* xin, const int* ps, int* njinit, int* pnjlen, const 
 	//  cout << "Processing " << *maxiter << " iterations:\t '.' = 100 iterations" << endl; 
 	Rprintf("Processing ,%d, iterations:\t '.' = 100 iterations\n", *maxiter);
   //
-  for (register int iter=0; iter < *maxiter; ++iter) {
+  for (int iter=0; iter < *maxiter; ++iter) {
     //
     // ----------step 3: sig | s, theta, x ----- AND --- step 2: phi | s, sig, x  ----//
     // Sampling step 2 and step 3 first
@@ -137,7 +137,7 @@ void gibbsdpm(const double* xin, const int* ps, int* njinit, int* pnjlen, const 
       mdimval[j]                = (*it).second.size();
     }
     //---------------------
-    for(register int i=0; i < n; ++i) {
+    for(int i=0; i < n; ++i) {
       if(clsize != stb.size()) { // resize and update
         clsize                  = stb.size();
         thetaval.resize(clsize);  

@@ -1,3 +1,7 @@
+Changes in dpmixsim version 0.0-9
+
+  o Updated to remove the C keyword 'register'
+
 Changes in dpmixsim version 0.0-8
 
   o Correction for non-ASCII demo file

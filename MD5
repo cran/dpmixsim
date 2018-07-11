@@ -1,6 +1,6 @@
-4bc75aaea2ff1b5c86518764b3914246 *DESCRIPTION
-8f0dc7eea273450045754877eab0b8f3 *NAMESPACE
-957b7f48759ddd58280fb12aeb5aca00 *NEWS
+60024e8eb29d1a6597bc97d63a61267e *DESCRIPTION
+97653ece34c881f9a906c331e583a201 *NAMESPACE
+da992a34cc5f8cc3f0b3fb58a04bb08d *NEWS
 cb8c6b7745bd293db2cdc1c09ab794d4 *R/dpmixsim.R
 e607b090320f5700c72744e50a6d195c *R/postdataseg.R
 24bc8770c2749e0319aa7db76b215fe6 *R/postdpmixciz.R
@@ -27,5 +27,5 @@ e687c1bef4805deaccf58cb91a7b0c92 *man/prescale.Rd
 20220835adcba719dffc16ba98510455 *man/readsliceimg.Rd
 ed9f9569f47225b3fd90000d0161e5c9 *man/t1_pn3_rf0_slice_0092.Rd
 a39654e6a4803d283e7fa515d00e1227 *man/t1_pn3_rf0_slice_0092_mask.Rd
-988990fa8f6b4a93d727e367458ec99e *src/RCS/gibbsclustersamplealpha.cc,v
-e6984e6a8013ebf189f9d501f5f65576 *src/gibbsclustersamplealpha.cc
+c0f6e70899bf00a9193c0c9ddc956e2a *src/gibbsclustersamplealpha.cc
+7c22b1b500cab25872924e218f1645f5 *src/registerDynamicSymbol.c

@@ -1,2 +1,20 @@
-useDynLib(dpmixsim)
-export(dpmixsim,readsliceimg,premask,prescale,postdpmixciz,postdataseg,postimgclgrp,postimgcomps,postkcluster)
+useDynLib(dpmixsim, .registration = TRUE)
+
+
+importFrom("grDevices", "dev.cur", "dev.set", "gray")
+importFrom("graphics", "axis", "barplot", "hist", "image", "lines",
+             "par", "points")
+importFrom("stats", "dnorm", "runif")
+importFrom("cluster", "clara")
+importFrom("oro.nifti", "readNIfTI")
+
+export(dpmixsim,
+ readsliceimg,
+ premask,
+ prescale,
+ postdpmixciz,
+ postdataseg,
+ postimgclgrp,
+ postimgcomps,
+ postkcluster
+)
